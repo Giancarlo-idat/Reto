@@ -1,0 +1,29 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  application:
+    name: Full Stack Futbolista App
+  datasource:
+    url: jdbc:mysql://localhost:3306/civa_test?allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+
+security:
+  jwt:
+    key:
+      secret: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJCYWVsZHVuZyBEZXRhaWxzIiwibmJmIjoxNjY5NDYzOTk0LCJpc3MiOiJCYWVsZHVuZyIsImV4cCI6MTY2OTQ2Mzk5OCwidXNlcklkIjoiMTIzNCIsImlhdCI6MTY2OTQ2Mzk5MywianRpIjoiYjQ0YmQ2YzYtZjEyOC00NDE1LTg0NTgtNmQ4YjRiYzk4ZTRhIn0.14jm1FVPXFDJCUBARDTQkUErMmUTqDt5uMTGW6hDuV0
+    user:
+      generator: JWT-AUTH-TOKEN
